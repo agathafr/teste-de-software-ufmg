@@ -29,8 +29,8 @@ public class Stack<T> {
 	public T pop() throws EmptyStackException {
 		if (isEmpty())
 			throw new EmptyStackException();
-    T elem = elements.get(size - 1);      // BUG, pois não retira da pilha!
-    // T elem = elements.remove(size - 1);     // código certo!
+    // T elem = elements.get(size - 1);      // BUG, pois não retira da pilha!
+     T elem = elements.remove(size - 1);     // código certo!
 		size--;
 		return elem;
 	}
